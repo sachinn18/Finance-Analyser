@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: finance-dashboard
+    env: python
+    plan: free
+    pythonVersion: 3.11.9
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
